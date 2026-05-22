@@ -1,73 +1,51 @@
-# React + TypeScript + Vite
+# Lista de Exercícios - Programação JS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação interativa para resolver e visualizar exercícios de JavaScript, com categorias por assunto e níveis de dificuldade.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **3 categorias** de exercícios: Classes e Métodos, Map e Destructuring, Arrow Functions
+- **Níveis de dificuldade**: Fácil, Médio e Difícil
+- **Execução interativa**: insira parâmetros e veja o resultado em tempo real
+- **Visualização de código**: exibe a implementação de cada exercício
+- **Dark/Light mode**: alternância suave com persistência em `localStorage`
+- **Sidebar responsiva**: modo compacto em desktop, overlay em mobile
+- 30 exercícios por categoria, totalizando 90 exercícios
 
-## React Compiler
+## Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19 + TypeScript 6 + Vite 8
+- Tailwind CSS v4
+- ESLint 10 (flat config)
+- pnpm
 
-## Expanding the ESLint configuration
+## Comandos
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Comando | Descrição |
+|---------|-----------|
+| `pnpm dev` | Iniciar dev server |
+| `pnpm build` | `tsc -b && vite build` |
+| `pnpm lint` | ESLint |
+| `pnpm preview` | Preview do build de produção |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Estrutura
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+LISTAS/                          # Arquivos .md com os exercícios
+├── 1 - listas_classes_metodos_herancas/
+├── 2 - lista_map_destructingArrays/
+└── 3 - lista_arrowFunctions/
+src/
+├── data/                        # Implementações e soluções
+│   ├── parseListas.ts           # Parser dos .md
+│   ├── lista01.ts → solutions01.ts
+│   ├── lista02.ts → solutions02.ts
+│   ├── lista03.ts → solutions03.ts
+│   └── lista04.ts → solutions04.ts
+├── components/
+│   ├── ExerciseCard.tsx         # Card com input/run/demo/code
+│   └── NivelSection.tsx         # Seção de nível (Fácil/Médio/Difícil)
+├── types.ts                     # Interfaces compartilhadas
+├── App.tsx                      # Layout principal + sidebar
+└── index.css                    # Tailwind + dark mode variant
 ```
