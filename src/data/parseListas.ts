@@ -28,6 +28,9 @@ function formatTitle(id: string): string {
   const parts = id.split('/')
   const fileName = parts[parts.length - 1]
   const num = fileName.replace(/^lista0*/, '')
+  if (num === fileName) {
+    return fileName.charAt(0).toUpperCase() + fileName.slice(1)
+  }
   return 'Lista ' + num
 }
 

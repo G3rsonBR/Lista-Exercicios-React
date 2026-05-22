@@ -26,7 +26,7 @@ const solLookup: Record<string, Record<string, Record<number, { code: string; de
     'lista_arrowFunctions/lista03': solutions04,
   },
   'Desafio': {
-    'Desafio/lista01': solutions05,
+    'Desafio/visualizar': solutions05,
   },
 }
 
