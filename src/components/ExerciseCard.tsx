@@ -88,14 +88,14 @@ export default function ExerciseCard({ exercise, code, isOpen, onToggle, params,
   return (
     <div className="border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition overflow-hidden">
       <div className="p-4">
-        <div className="flex items-start justify-between gap-4">
-          <p className="text-gray-800 dark:text-gray-200 flex-1 leading-relaxed">
+        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 sm:gap-4">
+          <p className="text-gray-800 dark:text-gray-200 sm:flex-1 leading-relaxed">
             <span className="font-bold text-indigo-600 dark:text-indigo-400 mr-2">
               {exercise.number}.
             </span>
             {exercise.description}
           </p>
-          <div className="shrink-0 flex gap-1.5">
+          <div className="flex gap-1.5 sm:shrink-0">
             {run && (
               <button
                 type="button"
