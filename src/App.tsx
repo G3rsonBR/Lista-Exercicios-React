@@ -4,6 +4,7 @@ import { solutions01 } from './data/solutions01'
 import { solutions02 } from './data/solutions02'
 import { solutions03 } from './data/solutions03'
 import { solutions04 } from './data/solutions04'
+import { solutions05 } from './data/solutions05'
 import NivelSection from './components/NivelSection'
 import type { ListaMeta } from './types'
 
@@ -23,6 +24,9 @@ const solLookup: Record<string, Record<string, Record<number, { code: string; de
     'lista_arrowFunctions/lista01': solutions04,
     'lista_arrowFunctions/lista02': solutions04,
     'lista_arrowFunctions/lista03': solutions04,
+  },
+  'Desafio': {
+    'Desafio/lista01': solutions05,
   },
 }
 

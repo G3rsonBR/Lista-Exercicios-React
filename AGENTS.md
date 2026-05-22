@@ -19,7 +19,7 @@
 ## Architecture
 - **Entry**: `src/main.tsx` → `src/App.tsx`
 - **Data**: `LISTAS/**/*.md` — files are grouped by parent directory (category), parsed via Vite glob
-- **Categories**: `1 - listas_classes_metodos_herancas/` (multi-level), `2 - lista_map_destructingArrays/` (single-level), `3 - lista_arrowFunctions/` (single-level)
+- **Categories**: `1 - listas_classes_metodos_herancas/` (multi-level), `2 - lista_map_destructingArrays/` (single-level), `3 - lista_arrowFunctions/` (single-level), `4 - Desafio/` (single-level)
 - No router, no test framework, no state management library installed
 - No CI config
 

@@ -38,7 +38,7 @@ function parseNiveis(lines: string[]): Nivel[] {
   for (const line of lines) {
     const trimmed = line.trim()
 
-    const nivelMatch = trimmed.match(/^N[íi]vel\s+(F[áa]cil|M[ée]dio|Dif[íi]cil)/i)
+    const nivelMatch = trimmed.match(/^N[íi]vel\s+(F[áa]cil|M[ée]dio|Dif[íi]cil|Desafio)/i)
     if (nivelMatch) {
       currentNivel = { name: `Nível ${nivelMatch[1]}`, focus: '', exercises: [] }
       niveis.push(currentNivel)
