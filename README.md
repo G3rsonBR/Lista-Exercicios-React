@@ -49,3 +49,14 @@ src/
 ├── App.tsx                      # Layout principal + sidebar
 └── index.css                    # Tailwind + dark mode variant
 ```
+
+## Créditos
+
+Este projeto foi desenvolvido com o auxílio de **OpenCode**, uma ferramenta de IA para engenharia de software que atuou em:
+
+- Criação do parser de markdown para carregar os exercícios dinamicamente
+- Implementação de todas as soluções (lista01 a lista04) e seus arquivos de solução com suporte a parâmetros interativos
+- Componentização da UI (ExerciseCard, NivelSection) com validação de inputs
+- Layout responsivo com sidebar adaptável (modo compacto em desktop, overlay em mobile)
+- Sistema de dark/light mode com transição suave e persistência
+- Estruturação do projeto e configuração de ferramentas (ESLint, TypeScript, Tailwind v4)
